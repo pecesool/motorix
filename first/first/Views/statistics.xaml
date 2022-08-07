@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="first.Views.statistics"
+             Title="Motorix">
+    <ContentPage.Content>
+        <StackLayout>
+        
+        <ScrollView>
+            <StackLayout>
+
+                <Frame BorderColor="#2196F3" Padding="10" Margin="0,10,0,0">
+                    <StackLayout>
+                        <Label Text="Статистика за всё время" TextColor="Black" FontSize="20" />
+                        
+                            <microcharts:ChartView x:Name="fff" HeightRequest="400"/>
+                        </StackLayout>
+                </Frame>
+
+                <Frame BorderColor="#2196F3" Padding="10" Margin="0,10,0,0">
+                    <StackLayout>
+                        <Label Text="Статистика за день" TextColor="Black" FontSize="20" />
+                        <Picker Title="Выберите Дату">
+
+                            <Picker.Items>
+                                <x:String>3 марта</x:String>
+                                <x:String>4марта</x:String>
+                                <x:String>6марта</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+                </Frame>
+                    <CollectionView x:Name="Coll">
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout Orientation="Vertical"></LinearItemsLayout>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <Label Text="{Binding Pal}" TextColor="Black"/>
+                                    <Label Text="{Binding Value}" TextColor="Black"/>
+                                    <Label Text="{Binding Date}" TextColor="Black"/>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

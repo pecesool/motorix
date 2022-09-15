@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using first.data;
 using System.IO;
+using Plugin.BluetoothClassic.Abstractions;
 
 namespace first
 {
@@ -18,7 +19,7 @@ namespace first
             return notesDB;
             }
         }
-        
+        public static IBluetoothManagedConnection CurrentBluetoothConnection { get; internal set; }
         public App()
         {
             InitializeComponent();

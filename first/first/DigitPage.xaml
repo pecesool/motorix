@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:local="clr-namespace:first.ViewModel"
+             
+             x:Class="first.DigitPage">
+    <ContentPage.BindingContext>
+        <local:DigitViewModel Digit="0" />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+
+
+            <StackLayout x:Name="choice" IsVisible="True" VerticalOptions="CenterAndExpand">
+                <StackLayout Orientation="Horizontal" >
+
+                    <Image x:Name="choicel" Source="left.png"  HeightRequest="250" WidthRequest="200"  Margin="5,0,5,0">
+                        <Image.GestureRecognizers>
+
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <Image x:Name="choicer" Source="right.png"  HeightRequest="250" WidthRequest="200" Margin="0,0,5,0" 
+                           >
+                        <Image.GestureRecognizers>
+
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Левая рука" TextColor="Black" FontSize="28" Margin="50,0,80,0" />
+                    <Label Text="Правая рука" TextColor="Black" FontSize="28" />
+
+                </StackLayout>
+            </StackLayout>
+
+
+
+
+
+
+
+
+            <StackLayout x:Name="r" IsVisible="false" VerticalOptions="Center">
+
+                <Grid Padding="0" Margin="0">
+
+                    <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
+                        <Image x:Name="r11"  Source="r1.png"  WidthRequest="70"  Margin="5,0,5,0"/>
+                        <Image x:Name="r22"  Source="r2.png"  WidthRequest="70"  Margin="5,0,5,0"/>
+                        <Image x:Name="r33" Source="r3.png"  WidthRequest="70"  Margin="5,0,5,0"/>
+                        <Image x:Name="r44" Source="r4.png"  WidthRequest="70"  Margin="5,0,5,0"/>
+                        <Image x:Name="r55" Source="r5.png"  WidthRequest="70"  Margin="5,0,5,0"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="1">
+                        <Label Text="большой" TextColor="Black" FontSize="20" Margin="5,0,5,0"/>
+                        <Label Text="указательный" TextColor="Black" FontSize="20" Margin="5,0,5,0"/>
+                        <Label Text="средний" TextColor="Black" FontSize="20" Margin="5,0,5,0"/>
+                        <Label Text="безымянный" TextColor="Black" FontSize="20" Margin="5,0,5,0"/>
+                        <Label Text="мизинец" TextColor="Black" FontSize="20" Margin="5,0,5,0"/>
+                    </StackLayout>
+                    
+                    
+                    <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="2">
+                        <Label x:Name="rval1" Text="0" TextColor="Black" FontSize="20" Margin="5,0,5,0"  WidthRequest="70"/>
+                        <Label x:Name="rval2" Text="0" TextColor="Black" FontSize="20" Margin="5,0,5,0" WidthRequest="70"/>
+                        <Label x:Name="rval3" Text="0" TextColor="Black" FontSize="5" Margin="5,5,5,5" WidthRequest="70" />
+                        <Label x:Name="rval4" Text="0" TextColor="Black" FontSize="20" Margin="5,0,5,0" WidthRequest="70"/>
+                        <Label x:Name="rval5" Text="0" TextColor="Black" FontSize="20" Margin="5,0,5,0" WidthRequest="70"/>
+                    </StackLayout>
+
+                   
+                    <Button Text="Завершить сеанс" x:Name="zav" BackgroundColor="#2196F3" TextColor="Black" HorizontalOptions="FillAndExpand" Grid.Column="0" Grid.Row="3" IsVisible="false"/>
+
+
+                    <ListView ItemsSource="{Binding Note}" Grid.Column="0" Grid.Row="4" IsVisible="false">
+
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid Padding="10">
+                                        <Frame>
+                                            <StackLayout Orientation="Horizontal">
+
+
+                                                <Label Text="{Binding Pal}"/>
+                                                <Label Text="{Binding Value}"/>
+                                                <Label Text="{Binding Date}"/>
+
+                                            </StackLayout>
+                                        </Frame>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    
+                    
+                </Grid>
+
+            </StackLayout>
+
+
+
+
+
+
+            <StackLayout x:Name="l" IsVisible="false" VerticalOptions="Center">
+                <Grid>
+                    <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
+                    <Image x:Name="l11" Source="l1.png"  WidthRequest="70"  Margin="5,0,5,0"/>
+                    <Image x:Name="l22" Source="l2.png"  WidthRequest="70"  Margin="5,0,5,0"/>
+                    <Image x:Name="l33" Source="l3.png"  WidthRequest="70"  Margin="5,0,5,0"/>
+                    <Image x:Name="l44" Source="l4.png"  WidthRequest="70"  Margin="5,0,5,0"/>
+                    <Image x:Name="l55" Source="l5.png"  WidthRequest="70"  Margin="5,0,5,0"/>
+                </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="1">
+                    <Label Text="мизинец" TextColor="Black" FontSize="20"/>
+                    <Label Text="безымянный" TextColor="Black" FontSize="20"/>
+                    <Label Text="средний" TextColor="Black" FontSize="20"/>
+                    <Label Text="указательный" TextColor="Black" FontSize="20"/>
+                    <Label Text="большой" TextColor="Black" FontSize="20"/>
+                </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="2">
+                        <Label x:Name="lval1" Text="0" TextColor="Black" FontSize="20"/>
+                        <Label x:Name="lval2" Text="0" TextColor="Black" FontSize="20"/>
+                        <Label x:Name="lval3" Text="0" TextColor="Black" FontSize="20"/>
+                        <Label x:Name="lval4" Text="0" TextColor="Black" FontSize="20"/>
+                        <Label x:Name="lval5" Text="0" TextColor="Black" FontSize="20"/>
+                    </StackLayout>
+
+                    <Button Text="Завершить сеанс" x:Name="zav1" BackgroundColor="#2196F3" TextColor="Black" HorizontalOptions="FillAndExpand"  Grid.Column="0" Grid.Row="3"/>
+
+                    <ListView ItemsSource="{Binding Note}" Grid.Column="0" Grid.Row="4" IsVisible="false">
+
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid Padding="10">
+                                        <Frame>
+                                            <StackLayout Orientation="Horizontal">
+
+
+                                                <Label Text="{Binding Pal}"/>
+                                                <Label Text="{Binding Value}"/>
+                                                <Label Text="{Binding Date}"/>
+
+                                            </StackLayout>
+                                        </Frame>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+            </StackLayout>
+
+            <StackLayout 
+            VerticalOptions="End" 
+            HorizontalOptions="Fill"
+            BackgroundColor="{Binding ConnectionStateBackgroundColor}">
+                <Label x:Name="lblConnectionStatus"
+                   HeightRequest="32"
+                   TextColor="White"
+                   FontSize="Medium"
+                   Text="{Binding ConnectionState, StringFormat='{0}.'}" 
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start"/>
+            </StackLayout>
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using first.ViewModel;
+using Plugin.BluetoothClassic.Abstractions;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using first.data;
-using SQLite;
 using first.models;
-using Plugin.BluetoothClassic.Abstractions;
+using SQLite;
+using first.Views;
 
 namespace first.Views
 {

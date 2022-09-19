@@ -32,11 +32,11 @@
                     </Grid.RowDefinitions>
 
                     <Button Grid.Column="0" x:Name="btnEnableBluetooth" Text="Enable Bluetooth" 
-                        IsEnabled="False" Clicked="btnEnableBluetooth_Clicked" />
+                        IsEnabled="False"  />
                     <Button Grid.Column="1" x:Name="btnDisableBluetooth" Text="Disable Bluetooth" 
-                        IsEnabled="False" Clicked="btnDisableBluetooth_Clicked" />
+                        IsEnabled="False"  />
                 </Grid>
-                <ListView x:Name="lvBluetoothBoundedDevices" ItemSelected="lvBluetoothBoundedDevices_ItemSelected">
+                <ListView x:Name="lvBluetoothBoundedDevices" >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <TextCell Text="{Binding Name}" Detail="{Binding Address}" />
@@ -49,130 +49,6 @@
             
             
 
-               <StackLayout x:Name="choice" IsVisible="False" VerticalOptions="CenterAndExpand">
-                      <StackLayout Orientation="Horizontal" >
-                    
-                           <Image x:Name="but2" Source="left.png"  HeightRequest="250" WidthRequest="200"  Margin="5,0,5,0">
-                               <Image.GestureRecognizers>
-
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
-
-                           </Image.GestureRecognizers>
-                            </Image>
-
-                        <Image x:Name="but3" Source="right.png"  HeightRequest="250" WidthRequest="200" Margin="0,0,5,0" 
-                           >
-                        <Image.GestureRecognizers>
-
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-
-                        </Image.GestureRecognizers>
-                        </Image>
-                   
-                      </StackLayout>
-                      <StackLayout Orientation="Horizontal">
-                        <Label Text="left hand" TextColor="Black" FontSize="28" Margin="50,0,80,0" />
-                        <Label Text="right hand" TextColor="Black" FontSize="28" />
-
-                       </StackLayout>
-                </StackLayout>   
-            
-            
-            
-            
-            
-            
-            
-                
-                <StackLayout x:Name="r" IsVisible="false" VerticalOptions="Center">
-
-                <Grid Padding="0" Margin="0">
-                    
-                    <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
-                    <Image x:Name="r11"  Source="r1.png"  WidthRequest="70"  Margin="5,0,5,0"/>
-                    <Image x:Name="r22"  Source="r2.png"  WidthRequest="70"  Margin="5,0,5,0"/>
-                    <Image x:Name="r33" Source="r3.png"  WidthRequest="70"  Margin="5,0,5,0"/>
-                    <Image x:Name="r44" Source="r4.png"  WidthRequest="70"  Margin="5,0,5,0"/>
-                    <Image x:Name="r55" Source="r5.png"  WidthRequest="70"  Margin="5,0,5,0"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="1">
-                        <Label Text="большой" TextColor="Black" FontSize="20"/>
-                        <Label Text="указательный" TextColor="Black" FontSize="20"/>
-                        <Label Text="средний" TextColor="Black" FontSize="20"/>
-                        <Label Text="безымянный" TextColor="Black" FontSize="20"/>
-                        <Label Text="мизинец" TextColor="Black" FontSize="20"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="2">
-                        <Button x:Name="r1" Text="+"/>
-                        <Button x:Name="r2" Text="+"/>
-                        <Button x:Name="r3" Text="+"/>
-                        <Button x:Name="r4" Text="+"/>
-                        <Button x:Name="r5" Text="+"/>                          
-                    </StackLayout>
-
-
-                    <Button Text="Start" x:Name="startr" BackgroundColor="#2196F3" TextColor="Black" HorizontalOptions="FillAndExpand" Grid.Column="0" Grid.Row="3"/>
-                    <Button Text="Завершить сеанс" x:Name="zav" BackgroundColor="#2196F3" TextColor="Black" HorizontalOptions="FillAndExpand" Grid.Column="0" Grid.Row="4"/>
-                    
-                    
-                    <ListView ItemsSource="{Binding Note}" Grid.Column="0" Grid.Row="5">
-                    
-                     <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <Grid Padding="10">
-                                    <Frame>
-                                        <StackLayout Orientation="Horizontal">
-
-
-                                            <Label Text="{Binding Pal}"/>
-                                            <Label Text="{Binding Value}"/>
-                                            <Label Text="{Binding Date}"/>
-
-                                        </StackLayout>
-                                    </Frame>
-                                </Grid>
-                            </ViewCell>
-                        </DataTemplate>
-                      </ListView.ItemTemplate>
-                   </ListView>
-                </Grid>
-                    
-                 </StackLayout>
-            
-
-            
-            
-            
-            
-                <StackLayout x:Name="l" IsVisible="false" VerticalOptions="Center">
-                    <StackLayout Orientation="Horizontal">
-                        <Image x:Name="l11" Source="l1.png"  WidthRequest="70"  Margin="5,0,5,0"/>
-                    <Image x:Name="l22" Source="l2.png"  WidthRequest="70"  Margin="5,0,5,0"/>
-                    <Image x:Name="l33" Source="l3.png"  WidthRequest="70"  Margin="5,0,5,0"/>
-                    <Image x:Name="l44" Source="l4.png"  WidthRequest="70"  Margin="5,0,5,0"/>
-                    <Image x:Name="l55" Source="l5.png"  WidthRequest="70"  Margin="5,0,5,0"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="мизинец" TextColor="Black" FontSize="20"/>
-                        <Label Text="безымянный" TextColor="Black" FontSize="20"/>
-                        <Label Text="средний" TextColor="Black" FontSize="20"/>
-                        <Label Text="указательный" TextColor="Black" FontSize="20"/>
-                        <Label Text="большой" TextColor="Black" FontSize="20"/>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Button x:Name="l1" Text="+"/>
-                        <Button x:Name="l2" Text="+"/>
-                        <Button x:Name="l3" Text="+"/>
-                        <Button x:Name="l4" Text="+"/>
-                        <Button x:Name="l5" Text="+"/>
-                    </StackLayout>
-                    <Button Text="Завершить сеанс" x:Name="zav1" BackgroundColor="#2196F3" TextColor="Black" HorizontalOptions="FillAndExpand"/>
-                </StackLayout>
-
-                
 
             
         </StackLayout>

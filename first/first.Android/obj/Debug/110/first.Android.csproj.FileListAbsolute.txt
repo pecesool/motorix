@@ -1414,3 +1414,4 @@ C:\Users\77054\Downloads\repos\first\first\first.Android\obj\Debug\110\stamp\_Co
 C:\Users\77054\Downloads\repos\first\first\first.Android\obj\Debug\110\stamp\_GenerateJavaStubs.stamp
 C:\Users\77054\Downloads\repos\first\first\first.Android\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\77054\Downloads\repos\first\first\first.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\77054\Downloads\repos\first\first\first.Android\obj\Debug\110\res\drawable\fra.png

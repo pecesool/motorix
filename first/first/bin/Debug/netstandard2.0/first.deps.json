@@ -13,7 +13,7 @@
           "Microcharts.Forms": "0.9.5.9",
           "NETStandard.Library": "2.0.3",
           "Plugin.BluetoothClassic": "1.1.5",
-          "Xamarin.CommunityToolkit": "2.0.4",
+          "Xamarin.CommunityToolkit": "2.0.5",
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.Forms": "5.0.0.2515",
           "sqlite-net-pcl": "1.8.116"
@@ -202,7 +202,7 @@
         }
       },
       "System.ValueTuple/4.5.0": {},
-      "Xamarin.CommunityToolkit/2.0.4": {
+      "Xamarin.CommunityToolkit/2.0.5": {
         "dependencies": {
           "System.Reflection.Emit.Lightweight": "4.7.0",
           "System.Threading.Tasks.Extensions": "4.5.4",
@@ -390,12 +390,12 @@
       "path": "system.valuetuple/4.5.0",
       "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     },
-    "Xamarin.CommunityToolkit/2.0.4": {
+    "Xamarin.CommunityToolkit/2.0.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ZpBCT3cl0UTpKQZefokcohRQB4YewZPWqoMoBIVJfmjatYb6pj4i1/WVRMmIGdZTNiT6WtZ+Nv4w6HypaBHrTg==",
-      "path": "xamarin.communitytoolkit/2.0.4",
-      "hashPath": "xamarin.communitytoolkit.2.0.4.nupkg.sha512"
+      "sha512": "sha512-8oFY5ZrKoIOCqtTeRh+jx5TAcs177TU0pEoefMWRptrq+TZoKwsPNg7L8lBtLSP+2ymg4VBn8i/6chA6b4mGdQ==",
+      "path": "xamarin.communitytoolkit/2.0.5",
+      "hashPath": "xamarin.communitytoolkit.2.0.5.nupkg.sha512"
     },
     "Xamarin.Essentials/1.7.3": {
       "type": "package",

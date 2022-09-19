@@ -34,3 +34,4 @@ C:\Users\77054\Downloads\repos\first\first\first\obj\Debug\netstandard2.0\first.
 C:\Users\77054\Downloads\repos\first\first\first\obj\Debug\netstandard2.0\refint\first.dll
 C:\Users\77054\Downloads\repos\first\first\first\obj\Debug\netstandard2.0\first.pdb
 C:\Users\77054\Downloads\repos\first\first\first\obj\Debug\netstandard2.0\ref\first.dll
+C:\Users\77054\Downloads\repos\first\first\first\obj\Debug\netstandard2.0\DigitPage.xaml.g.cs

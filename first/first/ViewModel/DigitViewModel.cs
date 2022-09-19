@@ -1,9 +1,11 @@
-﻿namespace first.ViewModel
-{
-    using Plugin.BluetoothClassic.Abstractions;
+﻿    using Plugin.BluetoothClassic.Abstractions;
    
     using System.ComponentModel;
     using System.Drawing;
+
+namespace first.ViewModel
+{
+
 
     public class DigitViewModel : INotifyPropertyChanged
     {

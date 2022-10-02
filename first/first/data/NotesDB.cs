@@ -19,8 +19,14 @@ namespace first.data
         }
         public Task<int> Addsas(Note note)
         {
-
-            return db.InsertAsync(note);
+            if (note.ID != 0)
+            {
+                return db.UpdateAsync(note);
+            }
+            else
+            {
+                return db.InsertAsync(note);
+            }
         }
         public Task<List<Note>> GetNotesAsync()
         {
